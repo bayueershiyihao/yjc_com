@@ -1,6 +1,5 @@
 @import "reset.css";
 @import "variables.css";
-
 * {
   box-sizing: border-box;
 }
@@ -35,7 +34,7 @@ a {
   color: #fff;
 }
 
-.header nav ul li {
+.header nav .menu li {
   position: relative;
   display: inline;
   margin: 0 10px;
@@ -43,7 +42,7 @@ a {
   font-size: 13px;
 }
 
-.header nav ul li::before {
+.header nav .menu li::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -57,7 +56,7 @@ a {
   transform-origin: left;
 }
 
-.header nav ul li:hover::before {
+.header nav .menu li:hover::before {
   transform: scaleX(1);
 }
 
@@ -68,8 +67,12 @@ a {
   font-size: 25px;
 }
 
-.toggle-btn {
-  visibility: hidden;
+.display-none {
+  display: none;
+}
+
+.menu-toggle_btn {
+  cursor: pointer;
 }
 
 .wrap {
@@ -79,14 +82,19 @@ a {
   height: 100%;
 }
 
+section {
+  position: relative;
+  height: 100%;
+}
+
 .wrap .header-title {
   position: absolute;
   top: 15%;
   left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 35px;
   letter-spacing: 2px;
-  transform: translate(-50%, -50%);
 }
 
 .wrap .main-content {
@@ -117,7 +125,7 @@ a {
 }
 
 .wrap .main-content .cont:hover {
-  background: #141414;
+  background: var(--bg-color);
   cursor: pointer;
   transform: scale(1.1);
   margin: 0 40px;
@@ -162,38 +170,164 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.3;
   border-radius: 15px;
   transition: filter 0.3s;
 }
 
 .wrap .main-content .cont1::after {
-  background: center
-    url("https://www.herzing.edu/sites/default/files/styles/fp_960_640/public/2020-09/it_computer_programming.jpg.webp?itok=8aEwtSxk");
+  background: center url("src/images/1.webp");
 }
 
 .wrap .main-content .cont2::after {
-  background: center
-    url("https://us.123rf.com/450wm/alphaspirit/alphaspirit1611/alphaspirit161100123/68624859-3d-%EC%95%88%EA%B2%BD-%EB%82%A8%EC%9E%90%EA%B0%80-%EB%B9%84%EB%94%94%EC%98%A4-%EA%B2%8C%EC%9E%84%EC%9D%84-%EC%9E%AC%EC%83%9D%ED%95%A9%EB%8B%88%EB%8B%A4.jpg?ver=6");
+  background: center url("src/images/2.jpg");
 }
 
 .wrap .main-content .cont3::after {
-  background: center
-    url("https://www.cengn.ca/wp-content/uploads/2020/01/Picture-Gap-Analysis-BLOG-1-991x780.png");
+  background: center url("src/images/3.jpg");
 }
 
 .wrap .main-content .cont4::after {
-  background: center
-    url("https://media.vlpt.us/images/jivyyyy/post/f3120f03-1be7-4c1d-98d8-de563ef7ae03/ad.jpg");
+  background: center url("src/images/4.jpg");
 }
 
 .wrap .main-content .cont:hover::after {
   height: 100%;
   filter: blur(3px);
+  opacity: 0.5;
 }
 
-/* PC (해상도 1024px)*/
-@media all and (max-width: 1408px) {
+.section3 {
+  display: flex;
+}
+
+.section3 .employed {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+}
+.section3 .employed i {
+  font-size: 150px;
+  color: white;
+}
+
+.section3 .employed .text {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.section3 .employed .text .name {
+  letter-spacing: 3px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.section3 .employed .text .company {
+  margin: 10px 0;
+}
+
+.section3 .employed:first-child::after {
+  content: "BOX HOVER";
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 23px;
+  animation: textAnimation 2s ease-in-out infinite;
+}
+
+.border-right {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0) scale(1.1);
+  }
+}
+
+.section3 .employed::before {
+  content: "";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.section3 .employed:hover::before {
+  top: -100%;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobile-header {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.mobile-menu i {
+  display: flex;
+  font-size: 40px;
+}
+
+.mobile-menu i:hover,
+.mobile-menu ul li {
+  cursor: pointer;
+}
+
+.mobile-menu ul li {
+  position: relative;
+  margin: 50px 0;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.mobile-menu ul li::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1408px) {
   .wrap .main-content .cont {
     width: 22%;
   }
@@ -203,7 +337,7 @@ a {
   }
 }
 
-@media all and (max-width: 1148px) {
+@media screen and (max-width: 1148px) {
   .wrap .main-content .cont h3 {
     font-size: 0.8rem;
   }
@@ -213,16 +347,32 @@ a {
   }
 }
 
-@media all and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .wrap .main-content .cont {
     height: 40%;
     width: 40%;
   }
+  .header-title {
+    display: none;
+  }
+  .employed .user i {
+    font-size: 100px;
+  }
 }
 
-@media all and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .wrap .main-content .cont {
     height: 20%;
     width: 80%;
+  }
+  .employed .user i {
+    font-size: 60px;
+  }
+  .section3 .employed .text .name {
+    font-size: 17px;
+  }
+  .section3 .employed .text .company,
+  .section3 .employed .text .class {
+    font-size: 13px;
   }
 }

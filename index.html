@@ -6,68 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="#">컴퓨터정보계열</a>
-      </div>
-      <nav>
-        <ul class="menu">
-          <li><a href="#">계열소개</a></li>
-          <li><a href="#">학과소개</a></li>
-          <li><a href="#">취업정보</a></li>
-          <li><a href="#">로그인</a></li>
-        </ul>
-        <div class="menu-toggle_btn">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-    </header>
-
     <div class="wrap">
-      <div id="particles-js"></div>
-      <div class="header-title">
-        <h1>학과소개</h1>
-      </div>
-      <div class="main-content">
-        <div class="cont1 cont">
-          <h3>
-            AI·빅데이터응용소프트웨어과
-            <span>WEB / AI</span>
-          </h3>
-          <p>
-            인공지능, 빅데이터 분야 소프트웨어 개발자 양성 및 웹/모바일/IOT 분야
-            응용 소프트웨어 개발자 양성
-          </p>
+      <header class="header">
+        <div class="logo">
+          <a href="#">컴퓨터정보계열</a>
         </div>
-        <div class="cont2 cont">
-          <h3>
-            정보보안·게임콘텐츠과
-            <span>UI UX / GAME / WEB DESIGN</span>
-          </h3>
-          <p>메타버스(Metaverse) 시대를 선도하는 IT보안•게임 전문인력 양성</p>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">계열소개</a></li>
+            <li><a href="#">학과소개</a></li>
+            <li><a href="#">취업정보</a></li>
+            <li><a href="#" class="login">로그인</a></li>
+          </ul>
+          <div class="menu-toggle_btn display-none">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="mobile-menu_show display-none">
+            <div class="mobile-menu display-none">
+              <div class="mobile-header">
+                <i class="fas fa-times mobile-close"></i>
+              </div>
+              <ul>
+                <li>계열소개</li>
+                <li>학과소개</li>
+                <li>취업정보</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="section1 main">
+        <video
+          src="src/videos/video.mp4"
+          autoplay
+          loop
+          muted
+          type="mp4"
+          class="video"
+        ></video>
+        <img src="src/images/mask.jpg" alt="" class="mask" />
+      </section>
+
+      <section class="section2">
+        <div id="particles-js"></div>
+        <div class="header-title">
+          <h1>학과소개</h1>
         </div>
-        <div class="cont3 cont">
-          <h3>
-            컴퓨터정보과
-            <span>NETWORK / SOFWARE</span>
-          </h3>
-          <p>
-            4차 산업혁명 시대 첨단 소프트웨어 개발자와 네트워크/서버 시스템
-            엔지니어 양성
-          </p>
+        <div class="main-content">
+          <div class="cont1 cont">
+            <h3>
+              AI·빅데이터응용소프트웨어과
+              <span>WEB / AI</span>
+            </h3>
+            <p>
+              인공지능, 빅데이터 분야 소프트웨어 개발자 양성 및 웹/모바일/IOT
+              분야 응용 소프트웨어 개발자 양성
+            </p>
+          </div>
+          <div class="cont2 cont">
+            <h3>
+              정보보안·게임콘텐츠과
+              <span>UI UX / GAME / WEB DESIGN</span>
+            </h3>
+            <p>메타버스(Metaverse) 시대를 선도하는 IT보안•게임 전문인력 양성</p>
+          </div>
+          <div class="cont3 cont">
+            <h3>
+              컴퓨터정보과
+              <span>NETWORK / SOFWARE</span>
+            </h3>
+            <p>
+              4차 산업혁명 시대 첨단 소프트웨어 개발자와 네트워크/서버 시스템
+              엔지니어 양성
+            </p>
+          </div>
+          <div class="cont4 cont">
+            <h3>
+              일본IT과
+              <span>NETWORK / SOFTWARE / WEB</span>
+            </h3>
+            <p>
+              4차 산업혁명 시대 첨단 소프트웨어 개발자와 네트워크/서버 시스템
+              엔지니어 양성
+            </p>
+          </div>
         </div>
-        <div class="cont4 cont">
-          <h3>
-            일본IT과
-            <span>NETWORK / SOFTWARE / WEB</span>
-          </h3>
-          <p>
-            4차 산업혁명 시대 첨단 소프트웨어 개발자와 네트워크/서버 시스템
-            엔지니어 양성
-          </p>
+      </section>
+      <section class="section3">
+        <div class="employed border-right">
+          <div class="user"><i class="fas fa-user-alt"></i></div>
+          <div class="text">
+            <p class="name">홍길동</p>
+            <p class="company">취업회사</p>
+            <p class="class">정보보안과</p>
+          </div>
         </div>
+        <div class="employed border-right">
+          <div class="user"><i class="fas fa-user-alt"></i></div>
+          <div class="text">
+            <p class="name">홍길동</p>
+            <p class="company">취업회사</p>
+            <p class="class">정보보안과</p>
+          </div>
+        </div>
+        <div class="employed border-right"">
+          <div class="user"><i class="fas fa-user-alt"></i></div>
+          <div class="text">
+            <p class="name">홍길동</p>
+            <p class="company">취업회사</p>
+            <p class="class">정보보안과</p>
+          </div>
+        </div>
+        <div class="employed">
+          <div class="user"><i class="fas fa-user-alt"></i></div>
+          <div class="text">
+            <p class="name">홍길동</p>
+            <p class="company">취업회사</p>
+            <p class="class">정보보안과</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="login-container display-none">
+      <div class="login-popup">
+        <h1>LOGIN</h1>
+        <form action="" class="login-form">
+          <input
+            class="input-hover"
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            class="input-hover"
+            type="password"
+            placeholder="Password"
+            name="password "
+          />
+          <input type="submit" value="Login" />
+        </form>
       </div>
     </div>
 
