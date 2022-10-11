@@ -199,11 +199,12 @@ section {
 
 .section3 {
   display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .section3 .employed {
   position: relative;
-  width: 25%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -232,7 +233,7 @@ section {
   margin: 10px 0;
 }
 
-.section3 .employed:first-child::after {
+.section3 .boxhover:first-child::after {
   content: "BOX HOVER";
   color: white;
   position: absolute;
@@ -241,6 +242,7 @@ section {
   font-size: 23px;
   animation: textAnimation 2s ease-in-out infinite;
 }
+
 
 .border-right {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -277,7 +279,7 @@ section {
 }
 
 .section3 .employed:hover::before {
-  top: -100%;
+  display: none;
 }
 
 .mobile-menu {
